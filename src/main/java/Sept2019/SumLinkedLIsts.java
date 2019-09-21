@@ -130,6 +130,74 @@ public class SumLinkedLIsts {
 	}
 	
 	
+	public static ListNode getNode(ListNode node,int k) {;
+		
+		getKthNode(node, k);
+		
+		return node;
+		
+	}
+	
+	
+
+	public static int getSize(ListNode n) {
+		
+		ListNode temp = n;
+		int size = 0;
+		while(temp!=null) {
+			temp = temp.next;
+			++size;
+		}
+		
+		return size;
+	}
+	
+	public static ListNode getKthNodeIteratively(ListNode node, int k) {
+		
+		
+		ListNode slowPointer = node;
+		ListNode fastPointer = node;
+		
+		int count = 0;
+		int n = getSize(node);
+		while(count< (n-k)) {
+			fastPointer = fastPointer.next;			
+			++count;
+		}
+		
+		// now move both pointers
+		
+		while(fastPointer!=null) {
+			slowPointer = slowPointer.next;
+			fastPointer = fastPointer.next;
+		}
+				
+		return slowPointer;
+		
+	}
+	
+	
+	public static int getKthNode(ListNode curr, int k) {
+
+		// base case
+		  if( curr == null) {
+		    int counter = 0;
+		    return counter;
+		  }
+
+		   int currValue =  1 + getKthNode(curr.next,k);
+		   
+		   if(currValue==k) {
+			   System.out.println(k+"th to last node is"+curr.val);
+		   }
+		   
+		   return currValue;	
+		}
+	
+	
+	
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -150,8 +218,11 @@ public class SumLinkedLIsts {
 		
 		//getSummedList(n1,n1);
 		//removeDuplicates(n1);
-		isPalindrome(n1);
-
+		//isPalindrome(n1);
+	//	ListNode node = getNode(n1,2);
+		ListNode node = getKthNodeIteratively(n1, 2);
+		System.out.println("node"+node);
+		
 	}
 
 }
