@@ -21,8 +21,8 @@ public class CoinPossibilities {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int amount = 38;
-		int coins[] = {5,1,10,25};
+		int amount = 4;
+		int coins[] = {1,2,3,4};
 		changePossibilitiesBottomUp(amount, coins);
 	}
 

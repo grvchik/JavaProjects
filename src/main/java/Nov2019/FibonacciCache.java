@@ -7,19 +7,24 @@ public class FibonacciCache {
 	public int getFibonacci(int i) {
 
 		 int cache[] = new int[i+1];
+		 
+	
 
-		 cache[0] = 1;
+		 cache[0] = 0;
 		 cache[1] = 1;
 		 
-		 if(i==0 || i ==1) {
-		    return 1;
+		 if(i==0 ) {
+		    return cache[i];
 		 }
-		 return   getFibonacci(i,cache);
+		 else {
+			 return   getFibonacci(i,cache);	 
+		 }
+		 
 		}	
 	
 	public int getFibonacci(int i, int cache[]) {
 
-		  if(cache[i]!=0) {
+		  if(i<=1) {
 		    return cache[i];
 		  }
 
@@ -31,7 +36,7 @@ public class FibonacciCache {
 		// TODO Auto-generated method stub
 		FibonacciCache cache = new FibonacciCache();
 		
-		System.out.println(cache.getFibonacci(4));
+		System.out.println(cache.getFibonacci(5));
 	}
 
 }
