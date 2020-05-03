@@ -19,17 +19,28 @@ public static int squareSubMatrix(int [][] arr)	{
 		  continue;
 		}
 
-		if(arr[i][j]==1) {
+		if(arr[i][j] >0 || cache[i][j] >0) {
 		  //
 		 System.out.println("row: "+i+" col:"+j);
 		 System.out.println("cache[i-1][j]"+cache[i-1][j]);
 		 System.out.println("cache[i][j-1]"+cache[i][j-1]);
 		 System.out.println("cache[i-1][j-1]"+cache[i-1][j-1]);
-			
-		  cache[i][j] = Math.min(Math.min(arr[i-1][j],arr[i][j-1]),arr[i-1][j-1]);
+		   // if value of all neighbors is same
+		   // then length is same as neighor
+		 
+		 // else 
+		 // length is the maximum
+		 	if(cache[i-1][j]==cache[i][j-1] && cache[i][j-1]==cache[i-1][j-1] && cache[i-1][j-1]>0) {		 	
+		 			cache[i][j] = arr[i-1][j-1]+1;		 		
+		 	}
+		 	else {
+		 		cache[i][j] = Math.max(Math.max(cache[i-1][j], cache[i][j-1]), cache[i-1][j-1]);
+		 	}
+		
 		  max = Math.max(max, cache[i][j]);
 		
 		}
+		cache[i][j] =max;
 	   }
 	} 
 	return  max;
@@ -42,7 +53,7 @@ public static int squareSubMatrix(int [][] arr)	{
 		// TODO Auto-generated method stub
 		int arr[][] = {
 				{0,1,1,1},
-				{0,1,1,0},
+				{0,1,1,1},
 				{0,1,1,1},
 		};
 		int res = squareSubMatrix(arr);

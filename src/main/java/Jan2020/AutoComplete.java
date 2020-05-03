@@ -95,6 +95,12 @@ public class AutoComplete {
 		buildTrie(str);
 		List<String> words =  getWordsForPre("de",str);
 		System.out.println(words);
+		
+		String str1 = "Hanuman";
+		
+		str1.charAt(0);
+		str1.substring(1,1);
+		
 		}
 
 }

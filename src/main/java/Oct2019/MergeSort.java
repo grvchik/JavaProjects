@@ -66,7 +66,7 @@ while(j<secondLength) {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[]nums = {4,3,2};
+		int[]nums = {4,3,2,8};
 		MergeSort ms = new MergeSort();
 		ms.mergeSort(nums, nums.length);
 		

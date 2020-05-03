@@ -14,7 +14,7 @@ public class CoinDenomations {
 
 				int amountRemainder = i-coin;
 				if(amountRemainder>=0) {
-					coinCoitainer[coin] = coinCoitainer[coin] +coinCoitainer[amountRemainder] ;	
+					coinCoitainer[i] = coinCoitainer[i] +coinCoitainer[amountRemainder] ;	
 				}
 				
 				
@@ -22,15 +22,16 @@ public class CoinDenomations {
 			
 			
 			
-		}		
+		}	
+		System.out.println(coinCoitainer[amount]);
 		return coinCoitainer[amount];
 	}
 	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int num[] = {1,2,3};
-		int amount = 4;
+		int num[] = {1,5};
+		int amount = 5;
 		System.out.println(noOfPossibilities(num, amount));
 	}
 
