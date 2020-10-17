@@ -36,6 +36,7 @@ public class GenerateParenthesis {
 	public void generateAll(List<String> ans, StringBuffer bracket, int n, int leftCounter, int rightCounter) {
 
 		if (bracket.length() == 2 * n) {
+			ans.add(bracket.toString());
 			bracket.delete(1, bracket.length());
 			return;
 		}

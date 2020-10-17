@@ -58,8 +58,9 @@ public class MergeKArrays {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[][] matrix = { {1,4,7},{2,5,8}};
-		mergeArrays(matrix);
+		int[][] matrix = { {3,1,2,4},{5,1,6},{4,7,3}};
+		int[] res = mergeArrays(matrix);
+		System.out.println(res);
 	}
 
 }

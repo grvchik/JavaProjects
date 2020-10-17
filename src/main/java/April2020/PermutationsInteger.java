@@ -51,6 +51,7 @@ public class PermutationsInteger {
 		// TODO Auto-generated method stub
 		int nums[] = {3,4,5,2};
 		permutateInteger(nums);
+		System.out.println(container);
 	}
 
 }

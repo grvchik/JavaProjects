@@ -1,12 +1,14 @@
 package Jan2020;
 
+import java.util.regex.Pattern;
+
 public class RegularExression {
 
 	public boolean doesRegExMatch(String regex,String input) {
 		
 	
 		regex = " "+regex;
-		input = " "+input;
+		input = input;
 		boolean result[][] = new boolean[input.length()][regex.length()];		
 		result[0][0] = true;
 		
@@ -44,10 +46,12 @@ public class RegularExression {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RegularExression regexObj = new RegularExression();
-		String regex = "chor.b";
-		String input = "choraaab";
+		Pattern pt = Pattern.compile("[a-zA-Z]?_[a-zA-Z]?");
+		String regex = "*._.*";
+		String input = "a_Z";
 		boolean res = regexObj.doesRegExMatch(regex, input);
-		System.out.println(res);
+		boolean res2 =pt.matcher(input).matches();
+		System.out.println(res2);
 		
 	}
 

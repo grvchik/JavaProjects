@@ -82,7 +82,7 @@ public class BalancedTree {
 	    four.right = six;
 		
 		BalancedTree btree = new BalancedTree();
-		btree.isBalanced(root);
+		System.out.println(btree.isBalanced(root));
 		
 	}
 }

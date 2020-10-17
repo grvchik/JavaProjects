@@ -22,7 +22,7 @@ public class BitAddition {
 		BitAddition ba = new BitAddition();
 		System.out.println(Integer.toBinaryString(1));
 		System.out.println(Integer.toBinaryString(2));
-		int res = ba.addTwoNumbers(1,2);
+		int res = ba.addTwoNumbers(4,4);
 		System.out.println(res);
 	}
 

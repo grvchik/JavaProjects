@@ -73,7 +73,7 @@ public class WordIn2DArray {
 		{'G','A','L','I'},
 		{'Y','A','A','N'}};
 	
-	  boolean res =  doesWordExists(word, "TERMA");
+	  boolean res =  doesWordExists(word, "TERLA");
 	  System.out.println(res);
 	}
 

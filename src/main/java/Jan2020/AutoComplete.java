@@ -98,8 +98,10 @@ public class AutoComplete {
 		
 		String str1 = "Hanuman";
 		
-		str1.charAt(0);
-		str1.substring(1,1);
+		str1.charAt(2);
+		System.out.println(str1.charAt(2));
+		str1.substring(0,3);
+		System.out.println(str1.substring(0,3));
 		
 		}
 

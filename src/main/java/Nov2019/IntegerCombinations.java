@@ -43,8 +43,8 @@ public class IntegerCombinations {
 		retList.add(2);
 		retList.add(3);
 		IntegerCombinations ic = new IntegerCombinations();
-		ic.printCombinations(retList);
-		System.out.println(retList);
+		List<Integer> numComb = ic.printCombinations(retList);
+		System.out.println(numComb);
 		
 	}
 
